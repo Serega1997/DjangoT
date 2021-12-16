@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="UTF-8">
+  </head>
+  <body>
+      <form action="/Caesar" method="post">
+          {% csrf_token %}
+
+        <h2>Шифр Цезаря</h2>
+          <a href="/">Вернуться на главную</a><br>
+          <br>
+          <input type="text" name="text" required><br>
+          <input type="radio" name="radiobutton" required value="ru">ru<br>
+          <input type="radio" name="radiobutton" required value="en">en<br>
+        <br>
+        <input type="submit" value="START">
+          <div> Преобразование&emsp;&emsp;&emsp;&emsp;Преобразованный текст </div><br>
+        <p>{{ condition }}</p>
+          <p>{{ text_Caesar_choice|safe }}</p><br>
+      </form>
+
+  </body>
+</html>
